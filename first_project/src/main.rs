@@ -87,4 +87,26 @@ fn main() {
             println!("DIFF");
         }
     }
+
+    //vectorsssss
+    let mut names: Vec<String> = Vec::new();
+
+    for i in 0..3 {
+        println!("Insert name {} >> ", i);
+        let mut vec_name: String = String::new();
+        std::io::stdin().read_line(&mut vec_name).unwrap();
+
+        names.push(vec_name);
+    }
+
+    println!("{:?}", names);
+    println!("{}", names.len());
+    println!("{}", names[0]);
+
+    for name in names {
+        println!("NAME: {}", name);
+    }
+
+    let new_vec: [&str; 5] = ["H", "E", "L", "L", "O"];
+    printkn!("{}", new_vec);
 }
