@@ -16,13 +16,20 @@ fn main() {
 
     std::io::stdin().read_line(&mut user_name).unwrap();
 
-    //get age
     println!("Introduce your age >> ");
     let mut user_age: String = String::new();
     std::io::stdin().read_line(&mut user_age).unwrap();
 
     //convert into integer
     let _user_age_int: u8 = user_age.trim().parse().unwrap();
+
+    if _user_age_int >= 18 && (_user_age_int <= 70 || _user_age_int == 80) {
+        println!("GO IN");
+    } else if _user_age_int == 90 {
+        println!("GO ???")
+    } else {
+        println!("GO OUT")
+    }
 
     println!("Hello, welcome {} your age is {}", user_name, _user_age_int);
 
@@ -41,4 +48,43 @@ fn main() {
 
     println!("Hello {} from {}", new_name, new_country);
 
+    //chllng 2
+    let mut choose: String = String::new();
+
+    println!("Choose either 0 or 1 >> ");
+    std::io::stdin().read_line(&mut choose).unwrap();
+
+    let new_choose: i8 = choose.trim().parse().unwrap();
+
+    if new_choose == 0 {
+        println!("U L0000000SE");
+    } else if new_choose == 1 {
+        println!("U W111111N");
+    } else {
+        println!("BR000 ????");
+    }
+
+    let number_1: i32 = 100;
+    let number_2: i32 = 10;
+
+    let sum: i32 = number_1 + number_2;
+    println!("SUM: {} + {} = {}", number_1, number_2, sum);
+
+    //create loop
+    loop {
+        let mut sum_user: String = String::new();
+
+        println!("INSERT NUMBER >> ");
+        std::io::stdin().read_line(&mut sum_user).unwrap();
+
+        let _sum_user_int: i32 = sum_user.trim().parse().unwrap();
+
+        if sum == _sum_user_int {
+            println!("SAME");
+            //break loop
+            break;
+        } else {
+            println!("DIFF");
+        }
+    }
 }
