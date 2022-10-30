@@ -1,3 +1,11 @@
+use regex::Regex;
+
 fn main() {
-    println!("Hello, world!");
+    // Regex
+    
+    // User Data
+
+    // Validations
+
+    // Show Result
 }
